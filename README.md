@@ -18,7 +18,7 @@ The main goal of the analysis was to investigate:
 - where the strongest and deepest earthquakes occurred,
 - how earthquake activity in Europe compares with the global pattern.
 
-The final report consists of **five pages**, moving from a global overview to temporal, geographic and regional analysis.
+The final report consists of **four main analytical pages**, moving from a global overview to temporal, geographic and regional analysis.
 
 
 ## Data Source
@@ -93,7 +93,7 @@ The final map distinguishes between:
 
 and includes country boundaries for geographic context.
 
-The map was exported in high resolution and added to Power BI. A separate full-screen map page was created so users can explore the complete spatial distribution without affecting report performance.
+The map was exported in high resolution and added to Power BI. A larger map view can be opened directly from the Geographic Analysis page so users can explore the complete spatial distribution without affecting report performance.
 
 
 ## Data Model
@@ -164,7 +164,7 @@ The main KPIs include:
 
 The page also compares earthquakes by magnitude class and depth, shows the share of onshore and offshore events and provides detailed earthquake records.
 
-![Overview](Screenshots/01_overview.png)
+![Overview](screenshots/01_overview.png)
 
 
 ## 2. Temporal Analysis
@@ -204,26 +204,15 @@ The hierarchy can be expanded from:
 
 The page also provides metrics such as earthquake count, magnitude 7.0+ share, average magnitude, maximum magnitude, average depth and year-over-year change.
 
-![Geographic Analysis](Screenshots/03_geographic_analysis.png)
+The global map was prepared in QGIS and distinguishes between **Onshore** and **Offshore** earthquakes. Users can open a larger map view directly from the Geographic Analysis page to explore the complete spatial distribution.
+
+<p>
+  <img src="screenshots/03_geographic_analysis.png" width="49%">
+  <img src="screenshots/04_global_earthquake_map.png" width="49%">
+</p>
 
 
-## 4. Global Earthquake Map
-
-This page provides a full-size view of the earthquake distribution prepared in QGIS.
-
-The map distinguishes between:
-
-- **Onshore**
-- **Offshore**
-
-earthquakes and includes country boundaries for additional context.
-
-The visualization clearly shows major global earthquake belts, especially around the Pacific, western North and South America, Japan, Indonesia and southern Asia.
-
-![Global Earthquake Map](Screenshots/04_global_earthquake_map.png)
-
-
-## 5. Europe Deep Dive
+## 4. Europe Deep Dive
 
 The final page focuses specifically on earthquake activity in Europe.
 
@@ -244,7 +233,7 @@ A geographic parameter allows users to switch between **Country** and **Subregio
 
 Within the European subset, **Iceland** records the highest number of earthquakes, while the deepest earthquake occurred beneath Spain at approximately **610 km**.
 
-![Europe Deep Dive](Screenshots/05_europe_deep_dive.png)
+![Europe Deep Dive](screenshots/05_europe_deep_dive.png)
 
 
 ## Key Findings
