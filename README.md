@@ -18,7 +18,7 @@ The main goal of the analysis was to investigate:
 - where the strongest and deepest earthquakes occurred,
 - how earthquake activity in Europe compares with the global pattern.
 
-The final report consists of **four main analytical pages**, moving from a global overview to temporal, geographic and regional analysis.
+The final report consists of **four main pages**, moving from a global overview to temporal, geographic and regional analysis.
 
 
 ## Data Source
@@ -164,7 +164,7 @@ The main KPIs include:
 
 The page also compares earthquakes by magnitude class and depth, shows the share of onshore and offshore events and provides detailed earthquake records.
 
-![Overview](screenshots/01_overview.png)
+![Overview](Screenshots/01_overview.png)
 
 
 ## 2. Temporal Analysis
@@ -183,7 +183,7 @@ It includes:
 
 The analysis shows that **2011** was the most active year in the dataset, with **2,701 earthquakes**.
 
-![Temporal Analysis](screenshots/02_temporal_analysis.png)
+![Temporal Analysis](Screenshots/02_temporal_analysis.png)
 
 
 ## 3. Geographic Analysis
@@ -204,11 +204,11 @@ The hierarchy can be expanded from:
 
 The page also provides metrics such as earthquake count, magnitude 7.0+ share, average magnitude, maximum magnitude, average depth and year-over-year change.
 
-The global map was prepared in QGIS and distinguishes between **Onshore** and **Offshore** earthquakes. Users can open a larger map view directly from the Geographic Analysis page to explore the complete spatial distribution.
+The global map was prepared in QGIS and distinguishes between **Onshore** and **Offshore** earthquakes. A larger version of the map can be opened directly from the Geographic Analysis page.
 
 <p>
-  <img src="screenshots/03_geographic_analysis.png" width="49%">
-  <img src="screenshots/04_global_earthquake_map.png" width="49%">
+  <img src="Screenshots/03_geographic_analysis.png" width="49%">
+  <img src="Screenshots/04_global_earthquake_map.png" width="49%">
 </p>
 
 
@@ -233,7 +233,7 @@ A geographic parameter allows users to switch between **Country** and **Subregio
 
 Within the European subset, **Iceland** records the highest number of earthquakes, while the deepest earthquake occurred beneath Spain at approximately **610 km**.
 
-![Europe Deep Dive](screenshots/05_europe_deep_dive.png)
+![Europe Deep Dive](Screenshots/05_europe_deep_dive.png)
 
 
 ## Key Findings
