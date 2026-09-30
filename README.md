@@ -2,11 +2,13 @@
 
 [View Interactive Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYWFhMGNmYTItM2FlOS00NGI3LTkyNGYtYWRlNTgwMGIyMTlmIiwidCI6Ijc1YzJlNGQ0LWQwNGMtNGNlOS1hMGVhLWM5NzViZGM0MTdlYiIsImMiOjF9&embedImagePlaceholder=true)
 
+[View Python Analysis Notebook](Python/earthquake_analysis_land_vs_offshore.ipynb)
+
 ## Project Overview
 
 This project presents an analysis of **46,462 earthquakes** recorded worldwide between **2000 and 2025**, with a magnitude of at least **5.0**.
 
-The project combines **SQL Server, QGIS and Power BI** to explore earthquake activity from temporal, geographic and magnitude-related perspectives.
+The project combines **SQL Server, QGIS, Power BI and Python** to explore earthquake activity from temporal, geographic, magnitude and depth-related perspectives.
 
 The main goal of the analysis was to investigate:
 
@@ -15,11 +17,11 @@ The main goal of the analysis was to investigate:
 - which countries and continents recorded the highest activity,
 - how earthquakes differ by magnitude and depth,
 - how many events occurred onshore and offshore,
+- whether land and offshore earthquakes differ in terms of magnitude and depth,
 - where the strongest and deepest earthquakes occurred,
 - how earthquake activity in Europe compares with the global pattern.
 
-The final report consists of **four main pages**, moving from a global overview to temporal, geographic and regional analysis.
-
+The Power BI report consists of **four main pages**, moving from a global overview to temporal, geographic and regional analysis. A complementary analysis in **Python** focuses specifically on differences between land and offshore earthquakes.
 
 ## Data Source
 
@@ -33,7 +35,6 @@ The analysis covers:
 - geographic scope: **worldwide**
 
 The original data was downloaded in several CSV files and contained information such as earthquake ID, date and time, coordinates, magnitude, depth, place description and event status.
-
 
 ## Data Preparation
 
@@ -51,7 +52,6 @@ The validation process included checking:
 After validation, the dataset contained **46,462 unique earthquake records**.
 
 The data was then prepared for reporting in **Power Query**, where relevant fields were selected, data types were standardized and supporting analytical columns were created.
-
 
 ## Geographic Preparation in QGIS
 
@@ -77,7 +77,6 @@ Australia and Oceania were also combined into one reporting category:
 
 `Australia & Oceania`
 
-
 ## Why QGIS Was Used for the Global Map
 
 The original plan was to display all earthquake points directly in Power BI.
@@ -94,7 +93,6 @@ The final map distinguishes between:
 and includes country boundaries for geographic context.
 
 The map was exported in high resolution and added to Power BI. A larger map view can be opened directly from the Geographic Analysis page so users can explore the complete spatial distribution without affecting report performance.
-
 
 ## Data Model
 
@@ -125,7 +123,6 @@ Earthquakes were also divided into three depth categories:
 - **Intermediate** – 70–299.9 km
 - **Deep** – 300 km or more
 
-
 ## DAX Measures
 
 DAX measures were created to support dynamic analysis throughout the report.
@@ -146,6 +143,28 @@ They include calculations for:
 
 The measures react dynamically to filters and geographic hierarchy levels.
 
+## Python Analysis | Land vs Offshore
+
+A complementary analysis was carried out in **Python** to investigate whether **land and offshore earthquakes differ in terms of magnitude and depth**.
+
+The analysis includes:
+
+- data quality checks,
+- geographic classification validation,
+- exploratory data analysis,
+- global earthquake visualization,
+- magnitude and depth distributions,
+- comparison of land and offshore earthquakes over time,
+- descriptive statistics,
+- **Mann–Whitney U tests** for magnitude and depth.
+
+The results showed that the median magnitude was **5.2 for both land and offshore earthquakes**, and the Mann–Whitney U test found **no statistically significant difference in magnitude** between the two groups (**p = 0.177**).
+
+A clearer difference was observed for earthquake depth. The median depth was **32 km for land earthquakes** and **22 km for offshore earthquakes**, and the Mann–Whitney U test found a **statistically significant difference in depth** (**p < 0.001**).
+
+The analysis was created in **Google Colab** using **pandas, Matplotlib, Seaborn, Plotly and SciPy**.
+
+[View Python Analysis Notebook](Python/earthquake_analysis_land_vs_offshore.ipynb)
 
 # Dashboard Pages
 
@@ -166,7 +185,6 @@ The page also compares earthquakes by magnitude class and depth, shows the share
 
 ![Overview](Screenshots/01_overview.png)
 
-
 ## 2. Temporal Analysis
 
 This page focuses on how earthquake activity changed between **2000 and 2025**.
@@ -184,7 +202,6 @@ It includes:
 The analysis shows that **2011** was the most active year in the dataset, with **2,701 earthquakes**.
 
 ![Temporal Analysis](Screenshots/02_temporal_analysis.png)
-
 
 ## 3. Geographic Analysis
 
@@ -211,7 +228,6 @@ The global map was prepared in QGIS and distinguishes between **Onshore** and **
   <img src="Screenshots/04_global_earthquake_map.png" width="49%">
 </p>
 
-
 ## 4. Europe Deep Dive
 
 The final page focuses specifically on earthquake activity in Europe.
@@ -235,7 +251,6 @@ Within the European subset, **Iceland** records the highest number of earthquake
 
 ![Europe Deep Dive](Screenshots/05_europe_deep_dive.png)
 
-
 ## Key Findings
 
 The analysis highlights several patterns:
@@ -249,9 +264,10 @@ The analysis highlights several patterns:
 - **2011** was the most active year, with **2,701 earthquakes**.
 - Asia records the highest number of onshore earthquakes among the continents.
 - Earthquake activity is strongly concentrated along major global seismic zones.
+- In the Python analysis, the median magnitude was **5.2 for both land and offshore earthquakes**, with no statistically significant difference between the groups.
+- The median depth was **32 km for land earthquakes** and **22 km for offshore earthquakes**, with a statistically significant difference in depth.
 - In Europe, **Iceland** is the most active country in the dataset.
 - The deepest European earthquake occurred beneath Spain at approximately **610 km**.
-
 
 ## Tools & Technologies
 
@@ -261,6 +277,7 @@ The analysis highlights several patterns:
 - **Power Query**
 - **DAX**
 - **QGIS**
+- **Python**
 - **CSV**
 - **USGS Earthquake Catalog**
 - **Natural Earth geographic data**
