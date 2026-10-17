@@ -1,4 +1,4 @@
-# Globalna analiza trzęsień ziemi | 2000–2025
+# Globalna analiza trzęsień ziemi 2000–2025
 
 [English version](README.md)
 
