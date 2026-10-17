@@ -1,6 +1,8 @@
-# Global Earthquake Analysis | 2000–2025
+# Global Earthquake Analysis 2000–2025
 
-[View Interactive Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNTQ1YWUzODgtODZmNy00MzBjLTg5YTEtMTM4NjA0MzdkMmJhIiwidCI6Ijc1YzJlNGQ0LWQwNGMtNGNlOS1hMGVhLWM5NzViZGM0MTdlYiIsImMiOjF9&embedImagePlaceholder=true)
+[Wersja polska](README_PL.md)
+
+[View Interactive Power BI Dashboard](https://app.fabric.microsoft.com/view?r=eyJrIjoiNzBjZmVmNjQtMmUwOC00Mjc2LWEwN2EtN2NhMGMzMmUzMWVlIiwidCI6IjI3ZWI2YjZjLWRhZWQtNDFkMS05NTJhLTM0ZDY0MjgzZWFhNSJ9&embedImagePlaceholder=true)
 
 [Open Python Analysis in Google Colab](https://colab.research.google.com/drive/1mkUwWq1bZU7Vy5msHLRfapL_AFs6Uo-A?usp=sharing)
 
